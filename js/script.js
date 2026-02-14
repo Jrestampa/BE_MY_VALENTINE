@@ -17,10 +17,10 @@ function moveButton(button) {
     const padding = 20;
     const maxWidth = window.innerWidth - button.offsetWidth - padding;
     const maxHeight = window.innerHeight - button.offsetHeight - padding;
-    
+
     const x = Math.max(padding, Math.random() * maxWidth);
     const y = Math.max(padding, Math.random() * maxHeight);
-    
+
     button.style.position = 'fixed';
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
@@ -40,17 +40,11 @@ function goToStep3() {
     triggerConfetti();
 }
 
-function goToStep4() {
-    document.getElementById('step3').classList.remove('active');
-    document.getElementById('step4').classList.add('active');
-    triggerConfetti();
-}
-
 function finalStep() {
-    document.getElementById('step4').classList.remove('active');
+    document.getElementById('step3').classList.remove('active');
     document.querySelector('.final-message').style.display = 'block';
     document.querySelector('.facebook-btn').style.display = 'inline-block';
-    
+
     // Celebration confetti storm
     const duration = 3 * 1000;
     const end = Date.now() + duration;
