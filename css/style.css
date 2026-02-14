@@ -41,6 +41,7 @@ body {
     color: var(--primary-red);
     opacity: 0.6;
     animation: fall linear forwards;
+    pointer-events: none;
 }
 
 @keyframes fall {
@@ -147,6 +148,11 @@ h1 {
 .btn-yes:hover {
     transform: scale(1.05) translateY(-3px);
     box-shadow: 0 10px 25px rgba(255, 77, 109, 0.4);
+}
+
+#step3 .btn-yes {
+    position: relative;
+    z-index: 100;
 }
 
 .btn-no {

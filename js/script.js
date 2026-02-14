@@ -29,21 +29,36 @@ function moveButton(button) {
 
 // Navigation functions
 function goToStep2() {
-    document.getElementById('step1').classList.remove('active');
-    document.getElementById('step2').classList.add('active');
-    triggerConfetti();
+    console.log("Navigating to Step 2");
+    const step1 = document.getElementById('step1');
+    const step2 = document.getElementById('step2');
+    if (step1 && step2) {
+        step1.classList.remove('active');
+        step2.classList.add('active');
+        triggerConfetti();
+    }
 }
 
 function goToStep3() {
-    document.getElementById('step2').classList.remove('active');
-    document.getElementById('step3').classList.add('active');
-    triggerConfetti();
+    console.log("Navigating to Step 3");
+    const step2 = document.getElementById('step2');
+    const step3 = document.getElementById('step3');
+    if (step2 && step3) {
+        step2.classList.remove('active');
+        step3.classList.add('active');
+        triggerConfetti();
+    }
 }
 
 function finalStep() {
-    document.getElementById('step3').classList.remove('active');
-    document.querySelector('.final-message').style.display = 'block';
-    document.querySelector('.facebook-btn').style.display = 'inline-block';
+    console.log("Entering Final Step");
+    const step3 = document.getElementById('step3');
+    const finalMsg = document.getElementById('finalMessage');
+    const fbBtn = document.getElementById('facebookBtn');
+
+    if (step3) step3.classList.remove('active');
+    if (finalMsg) finalMsg.style.display = 'block';
+    if (fbBtn) fbBtn.style.display = 'inline-block';
 
     // Celebration confetti storm
     const duration = 3 * 1000;
@@ -74,9 +89,13 @@ function finalStep() {
 }
 
 function triggerConfetti() {
-    confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 }
-    });
+    if (typeof confetti === 'function') {
+        confetti({
+            particleCount: 100,
+            spread: 70,
+            origin: { y: 0.6 }
+        });
+    } else {
+        console.warn("Confetti library not loaded yet.");
+    }
 }
