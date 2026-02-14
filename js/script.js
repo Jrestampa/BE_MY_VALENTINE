@@ -40,8 +40,14 @@ function goToStep3() {
     triggerConfetti();
 }
 
-function finalStep() {
+function goToStep4() {
     document.getElementById('step3').classList.remove('active');
+    document.getElementById('step4').classList.add('active');
+    triggerConfetti();
+}
+
+function finalStep() {
+    document.getElementById('step4').classList.remove('active');
     document.querySelector('.final-message').style.display = 'block';
     document.querySelector('.facebook-btn').style.display = 'inline-block';
     
