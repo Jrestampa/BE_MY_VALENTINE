@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine Baby?</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Icon -->
+    <link rel="Icon" href="images/heart.gif" type="image/gif">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dancing+Script:wght@400;700&family=Outfit:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="hearts"></div>
+    <div class="container">
+        <!-- Step 1 -->
+        <div class="step active" id="step1">
+            <img src="images/AshSnow.gif" alt="Cute Cat" class="cat-img">
+            <h1>Will you be my Valentine? 💝</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep2()">Yes</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">No</button>
+            </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step" id="step2">
+            <img src="images/are u sure.gif" alt="Cute Cat in Love" class="cat-img">
+            <h1>Are you sure you want to be my valentine? 😼</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="goToStep3()">Yes, 100% Sure</button>
+                <button class="btn btn-no" onmouseover="moveButton(this)" onclick="moveButton(this)">Let me
+                    think...</button>
+            </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step" id="step3">
+            <img src="images/Hugging.gif" alt="Cute Cat in Love" class="cat-img">
+            <h1>Promise me you'll always be my valentine ❤️</h1>
+            <div class="buttons">
+                <button class="btn btn-yes" onclick="finalStep()">Yes, I Promise</button>
+            </div>
+        </div>
+
+        <div class="final-message">
+            <div class="letter">
+                <div class="letter-content">
+                    <img src="images/kisses.gif" alt="Cute Cat in Love" class="cat-img">
+                    <p>Yeeeeeeeeeeeeeeeeeeeeeeeeeeeeey!</p>
+                    <p>I just want you to know how much
+                        I love you. You always make my days brighter without even trying. Being with you feels easy,
+                        warm, and
+                        right. I’m so lucky to have
+                        you, and I’m grateful for you every single day.</p>
+                    <p>Happy Valentine’s Day, beautiful ❤️! 🥰</p>
+                    <p class="signature">I WILL ALWAYS LOVE YOU MWAAA!!!</p>
+                </div>
+            </div>
+        </div>
+
+        <a href="https://www.facebook.com/share/1BfyNHAs2o/?mibextid=wwXIfr" class="facebook-btn" target="_blank">
+            Text me here 💌
+        </a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
